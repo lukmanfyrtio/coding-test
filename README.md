@@ -15,3 +15,28 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 ```shell
 mvn spring-boot:run
 ```
+# REST API
+
+
+## Call the API
+
+### Request
+
+`GET /api/v1/test`
+```shell
+    curl -X POST  http://localhost:8080/api/v1/test
+   -H "Content-Type: application/json"
+   -d '[{"model":"S","color":"Black"}]'  
+   ```
+
+### Response
+```shell
+HTTP/1.1 200 
+connection: keep-alive
+content-type: application/json
+date: Fri, 22 Jul 2022 10:01:11 GMT
+keep-alive: timeout=60
+transfer-encoding: chunked
+
+{"data":[{"color":"Black","model":"S"}],"status":200}
+   ```
