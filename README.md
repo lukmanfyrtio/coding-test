@@ -15,6 +15,11 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 ```shell
 mvn spring-boot:run
 ```
+And for running unit test you can use:
+
+```shell
+mvn test
+```
 # REST API
 
 
