@@ -25,7 +25,7 @@ mvn test
 
 ## Call the API 
 
-### Request on cmd/terminal or you can go to [Curl Directly from browser](https://reqbin.com/req/c-d2nzjn3z/curl-post-body)
+### Request on cmd , terminal or you can go to [curl directly from your browser](https://reqbin.com/req/c-dwjszac0/curl-post-json-example)
 
 `POST /api/v1/test`
 ```shell
