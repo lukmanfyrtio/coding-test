@@ -23,15 +23,15 @@ mvn test
 # REST API
 
 
-## Call the API
+## Call the API 
 
-### Request
+### Request on cmd/terminal or you can go to [Curl Directly from browser](https://reqbin.com/req/c-d2nzjn3z/curl-post-body)
 
-`GET /api/v1/test`
+`POST /api/v1/test`
 ```shell
     curl -X POST  http://localhost:8080/api/v1/test
    -H "Content-Type: application/json"
-   -d '[{"model":"S","color":"Black"}]'  
+   -d '[{"model":"S","color":"Black"},{"color":"none","model":"S"}]'  
    ```
 
 ### Response
