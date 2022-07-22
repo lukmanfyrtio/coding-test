@@ -6,7 +6,7 @@ public class Response<T> {
 
 	private int status;
 	private List<T> data;
-	private String message;
+	private String message="Your request has been processed successfully";
 
 	public int getStatus() {
 		return status;
