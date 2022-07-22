@@ -50,6 +50,7 @@ public class CarService {
 			if (data.getColor() == null || data.getColor() == "" || data.getColor() == "none") {
 				map.setModel(data.getModel());
 				map.setColor(lowestPrice.getColor());
+				map.setPrice(lowestPrice.getPrice());
 			} else {
 				// find data from existing
 				String filter = data.getModel() + data.getColor();
@@ -57,6 +58,7 @@ public class CarService {
 						.filter(dataF -> filter.equals(dataF.getModel() + dataF.getColor())).findFirst();
 				map.setModel(getCar.isPresent() ? getCar.get().getModel() : lowestPrice.getModel());
 				map.setColor(getCar.isPresent() ? getCar.get().getColor() : lowestPrice.getColor());
+				map.setPrice(getCar.isPresent() ? getCar.get().getPrice() : lowestPrice.getPrice());
 			}
 			result.add(map);
 		}
