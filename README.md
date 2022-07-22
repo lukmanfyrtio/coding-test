@@ -39,9 +39,9 @@ mvn test
 HTTP/1.1 200 
 connection: keep-alive
 content-type: application/json
-date: Fri, 22 Jul 2022 10:01:11 GMT
+date: Fri, 22 Jul 2022 18:42:14 GMT
 keep-alive: timeout=60
 transfer-encoding: chunked
 
-{"data":[{"color":"Black","model":"S"}],"status":200}
+{"status":200,"data":[{"model":"S","color":"Black","price":3000000.0},{"model":"S","color":"White","price":1000000.0}],"message":"Your request has been processed successfully"}
    ```
