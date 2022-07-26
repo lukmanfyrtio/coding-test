@@ -63,6 +63,27 @@ public class CarService {
 			result.add(map);
 		}
 
+		for (Car exist : existingData) {
+			Car map = new Car();
+			Optional<Car> data = result.stream().filter(fil -> fil.getModel().contentEquals(exist.getModel()))
+					.findFirst();
+
+			// get model list
+			List<Car> model = existingData.stream().filter(dataF -> dataF.getModel().equalsIgnoreCase(exist.getModel()))
+					.collect(Collectors.toList());
+			
+			
+			if (data.isEmpty()) {
+				// get lowest price from model list
+				Car lowestPrice = model.stream().min(Comparator.comparing(Car::getPrice))
+						.orElseThrow(NoSuchElementException::new);
+				map.setModel(exist.getModel());
+				map.setColor(lowestPrice.getColor());
+				map.setPrice(lowestPrice.getPrice());
+				result.add(map);
+			}
+		}
+
 		result1.setStatus(200);
 		result1.setData(result);
 		return result1;
